@@ -73,8 +73,8 @@ get_file = function(filename) {
   res = {
     is_packaged: o != null
   };
-  if (o.path != null) {
-    res.path = o.path;
+  if ((o != null ? o.path : void 0) != null) {
+    res.path = o != null ? o.path : void 0;
   }
   if ((o != null ? (_ref = o.tree) != null ? _ref[o.path] : void 0 : void 0) != null) {
     res.file = o.tree[o.path];
